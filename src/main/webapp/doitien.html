@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Đổi tiền</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <<h2>Bài tập 3</h2>
+        <hr>
+        <form action="DoiTienServlet" method="post">
+            <p>
+                Cho biết số tiền <input type="text" name="tien" value="" />
+            </p>
+            <p>
+                Chọn loại ngoại lệ
+                <select name="loaingoaile">
+                    <option value="USD">USD</option>
+                    <option value="GBP">GBP</option>
+                    <option value="EUR">EUR</option>
+                    <option value="JPY">JPY</option>
+                    <option value="AUD">AUD</option>
+                </select>
+            </p>
+            <input type="Submit" value="Gửi" />
+        </form>
+    </body>
+</html>
