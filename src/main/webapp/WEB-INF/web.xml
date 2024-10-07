@@ -12,6 +12,10 @@
         <servlet-name>DoiTienServlet</servlet-name>
         <servlet-class>servlet.DoiTienServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>servlet.RegisterServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>WelcomeServlet</servlet-name>
         <url-pattern>/WelcomeServlet</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>DoiTienServlet</servlet-name>
         <url-pattern>/DoiTienServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/RegisterServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
