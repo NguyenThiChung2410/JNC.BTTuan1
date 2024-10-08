@@ -34,10 +34,10 @@ public class RegisterServlet extends HttpServlet {
         String gioitinh = request.getParameter("gioitinh");
         String[] sothich = request.getParameterValues("sothich");
         Part part = request.getPart("hinh");
-        
-        String realPath =request.getServletContext().getRealPath("/uploads");
-        String filename=Paths.get(part.getSubmittedFileName()).getFileName().toString();
-        part.write(realPath + " / " + filename);
+
+        String realPath = request.getServletContext().getRealPath("uploads");
+        String filename = Paths.get(part.getSubmittedFileName()).getFileName().toString();
+        part.write(realPath + "/" + filename);
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
@@ -50,11 +50,11 @@ public class RegisterServlet extends HttpServlet {
             out.println("<h1>THÔNG TIN ĐÃ ĐĂNG KÝ</h1>");
             out.println("<hr>");
             out.println("<ul>");
-            out.println("<li>Họ tên: <b>" +hoten + "</b>");
-            out.println("<li>Giới tính: <b>" +gioitinh + "</b>");
-            out.println("<li>Sở thích: <b>" + Arrays.toString(sothich) + "</b>");
+            out.println("<li> Họ tên <b>" + hoten + "</b>");
+            out.println("<li> Giới tính <b>" + gioitinh + "</b>");
+            out.println("<li> Sở thích <b>" + Arrays.toString(sothich) + "</b>");
             out.println("<li>Ảnh đại diện: <img src='/uploads/" + filename + "' width=200px>");
-            out.println("</ul>");
+             out.println("</ul>");
             out.println("</body>");
             out.println("</html>");
         }
